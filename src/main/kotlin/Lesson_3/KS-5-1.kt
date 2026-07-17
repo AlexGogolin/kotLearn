@@ -9,10 +9,10 @@ fun main() {
     println("Решите уравнение для доступа: $equation")
     val access = readln().toIntOrNull()
 
-    if(access == null) {
-        println("Ошибка: введите целое число.")
+    if (access == null) {
+        println("Ошибка: введите целое число. Доступ запрещен")
         return
-    }else if (sum == access) {
+    } else if (sum == access) {
         println("Добро пожаловать!")
     } else {
         println("Доступ запрещен.")
