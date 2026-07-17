@@ -10,7 +10,7 @@ fun main() {
     val access = readln().toIntOrNull()
 
     if (access == null) {
-        println("Ошибка: введите целое число. Доступ запрещен")
+        println("Доступ запрещен. Введите целое число. ")
         return
     } else if (sum == access) {
         println("Добро пожаловать!")
