@@ -18,8 +18,8 @@ fun main() {
     val matchCount = (if (firstMatch) 1 else 0) + (if (secondMatch) 1 else 0)
 
     if (matchCount == 2) {
-        println("Поздравляем! Вы выиграли главный приз!")
+        println("Поздравляем! Вы выиграли главный приз! Выигрышные числа: $num1 и $num2")
     }else if (matchCount == 1){
-        println("Вы выиграли утешительный приз!")
-    }else println("Неудача!")
+        println("Вы выиграли утешительный приз! Выигрышные числа: $num1 и $num2")
+    }else println("Неудача! Выигрышные числа были: $num1 и $num2")
 }
