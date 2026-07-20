@@ -66,7 +66,7 @@ fun main() {
         println("Пароль должен быть не менее 6 символов")
         passwordLength = readln().toInt()
     }
-    var charStorage = mutableListOf<String>()
+    val charStorage = mutableListOf<String>()
 
     for (char in 1..passwordLength) {
         charStorage += numbers[(Random.nextInt(numbers.size))]
@@ -74,7 +74,11 @@ fun main() {
         charStorage += upperChars[(Random.nextInt(upperChars.size))]
     }
 
-    val passwordGenerator = charStorage.shuffled().take(passwordLength)
+    val passwordGenerator = mutableListOf<String>()
+        passwordGenerator += numbers[(Random.nextInt(numbers.size))]
+        passwordGenerator += lowerChars[(Random.nextInt(lowerChars.size))]
+        passwordGenerator += upperChars[(Random.nextInt(upperChars.size))]
+        passwordGenerator += charStorage.shuffled().take(passwordLength - 3)
     val password: String = passwordGenerator.joinToString(separator = "")
 
     println(password)
