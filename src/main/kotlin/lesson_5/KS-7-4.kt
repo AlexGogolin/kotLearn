@@ -4,9 +4,9 @@ fun main() {
     println("Сколько секунд хотите засечь?")
     val time = readln().toInt()
 
-    for (sec in time downTo 0 ) {
+    for (sec in time downTo 1 ) {
         println(sec)
         Thread.sleep(1000)
     }
-    println("Время вышло!")
+    println("Время вышло")
 }
