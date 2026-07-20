@@ -21,9 +21,11 @@ fun main() {
     }
     if (!isFoundIngredient) {
         println("Такого ингредиента нет!")
+    }else{
+        println("Готово! Вы сохранили следующий список: ${ingredients.joinToString(separator = ", ",
+            prefix = "[",
+            postfix = "]")}")
     }
-    println("Готово! Вы сохранили следующий список: ${ingredients.joinToString(separator = ", ",
-        prefix = "[",
-        postfix = "]")}")
+
 
 }
