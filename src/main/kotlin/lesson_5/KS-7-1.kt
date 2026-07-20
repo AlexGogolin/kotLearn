@@ -4,7 +4,7 @@ import kotlin.random.Random
 
 
 fun main() {
-    val numbers = "123456789"
+    val numbers = "0123456789"
     val lowerChars = "abcdefghijklmnopqrstuvwxyz"
 
     var password = ""
