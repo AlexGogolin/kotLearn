@@ -79,6 +79,7 @@ fun main() {
         passwordGenerator += lowerChars[(Random.nextInt(lowerChars.size))]
         passwordGenerator += upperChars[(Random.nextInt(upperChars.size))]
         passwordGenerator += charStorage.shuffled().take(passwordLength - 3)
+        passwordGenerator.shuffle()
     val password: String = passwordGenerator.joinToString(separator = "")
 
     println(password)
