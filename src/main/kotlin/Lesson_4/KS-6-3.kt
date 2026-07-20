@@ -6,9 +6,9 @@ fun main() {
 
     if (seconds != null) {
         while (seconds > 0) {
+            println("Осталось секунд: $seconds")
             Thread.sleep(1000)
             seconds--
-            println("Осталось секунд: $seconds")
         }
     }
     println("Время вышло")
