@@ -4,14 +4,14 @@ import kotlin.random.Random
 
 
 fun main() {
-    val upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    val numbers = "123456789"
     val lowerChars = "abcdefghijklmnopqrstuvwxyz"
 
     var password = ""
 
     for (i in 1..3) {
-        password += upperChars[Random.nextInt(upperChars.length)]
         password += lowerChars[Random.nextInt(lowerChars.length)]
+        password += numbers[Random.nextInt(numbers.length)]
     }
 
     println(password)
