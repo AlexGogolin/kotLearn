@@ -1,14 +1,11 @@
 package org.example.lesson_7
 
-import java.util.Locale
-import java.util.Locale.getDefault
-
 fun main() {
     System.setOut(java.io.PrintStream(System.`out`, true, "UTF-8"))
     val ingredients = mutableListOf<String>("Молоко", "Яйца", "Хлеб")
     println("В рецепте есть базовые ингредиенты: $ingredients")
 
-    println("Желаете добавить еще нгредиент?")
+    println("Желаете добавить еще?")
     val answerOfAdd = readln()
 
 
