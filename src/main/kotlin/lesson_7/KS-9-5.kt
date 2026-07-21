@@ -3,21 +3,13 @@ package org.example.lesson_7
 fun main() {
     System.setOut(java.io.PrintStream(System.`out`, true, "UTF-8"))
     val listOfIngredients = mutableListOf<String>()
-    var count = 1
     var userIngredient: String
-    while (count <= 5) {
+    for (i in 1..5) {
         println("Добавьте ингредиент")
         userIngredient = readln()
-        if (listOfIngredients.any { it.equals(userIngredient, ignoreCase = true) }) {
-            println("Такой ингредиент уже есть")
-            continue
-        } else {
-            listOfIngredients.add(userIngredient)
-            count++
-        }
+        listOfIngredients.add(userIngredient)
     }
 
-    val sortedStringOfIngredients = listOfIngredients.sorted().joinToString(", ").replaceFirstChar { it.uppercase() }
-
+    val sortedStringOfIngredients = listOfIngredients.distinct().sorted().joinToString(", ").replaceFirstChar { it.uppercase() }
     println(sortedStringOfIngredients)
 }
