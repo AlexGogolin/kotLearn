@@ -4,11 +4,11 @@ class User2(
     val id: Int,
     val login: String,
     var password: String,
-    val mail: String,
+    val email: String,
     var bio: String = "",
 ) {
     fun setAboutUser() {
-        println("Id: ${id}, Login: ${login}, Password: ${password}, mail: ${mail}, bio: ${bio}")
+        println("Id: ${id}, Login: ${login}, Password: ${password}, mail: ${email}, bio: ${bio}")
     }
 
     fun rewriteBio() {
@@ -36,5 +36,5 @@ fun main() {
     user.rewriteBio()
     user.setNewPassword()
 
-    println("Id: ${user.id}, Login: ${user.login}, Password: ${user.password}, mail: ${user.mail}, bio: ${user.bio}")
+    println("Id: ${user.id}, Login: ${user.login}, Password: ${user.password}, mail: ${user.email}, bio: ${user.bio}")
 }
