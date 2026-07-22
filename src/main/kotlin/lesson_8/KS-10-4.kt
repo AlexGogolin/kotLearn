@@ -1,8 +1,7 @@
 package org.example.lesson_8
 
 fun rollDice(): Int {
-    val roll = (1..6).random()
-    return roll
+    return (1..6).random()
 }
 
 fun rollGame(): Boolean {
@@ -22,7 +21,7 @@ fun main() {
     System.setOut(java.io.PrintStream(System.`out`, true, "UTF-8"))
     var humanScore = 0
     while (true) {
-        if (rollGame() == true) {
+        if (rollGame()) {
             humanScore++
         }
         println("Хотите бросить кости еще раз? Введите Да или Нет")
