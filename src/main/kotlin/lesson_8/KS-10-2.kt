@@ -14,5 +14,7 @@ fun main() {
 
     if (!validateInput(login = login, password = password)) {
         println("Логин или пароль недостаточно длинные")
+    }else{
+        println("Добро пожаловать!")
     }
 }
