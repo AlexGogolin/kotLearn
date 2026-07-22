@@ -10,7 +10,7 @@ class Recipe(
     val id: Int,
     val title: String,
     val wallpaper: String,
-    val ingredients: List<String>,
+    val ingredients: List<Ingredient>,
 )
 class Ingredient(
     val name: String,
