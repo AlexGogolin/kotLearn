@@ -6,18 +6,16 @@ fun main() {
     var humanScore: Int = 0
     var computerScore: Int = 0
 
-    for (i in 1..5) {
-        humanScore += rollDice()
-        println("Кубик бросил человек, выпало: ${rollDice()}")
-        computerScore += rollDice()
-        println("Кубик бросил компьютер, выпало: ${rollDice()}")
-    }
+    humanScore += rollDice()
+    println("Кубик бросил человек, выпало: $humanScore")
+    computerScore += rollDice()
+    println("Кубик бросил компьютер, выпало: $computerScore")
 
     if (humanScore == computerScore) {
         println("Победила дружба, счет $computerScore : $humanScore")
-    }else if(computerScore < humanScore) {
+    } else if (computerScore < humanScore) {
         println("Победило человечество, счет $computerScore : $humanScore")
-    }else{
+    } else {
         println("Победила машина, счет $computerScore : $humanScore")
     }
 
