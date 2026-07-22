@@ -5,7 +5,7 @@ class User2(
     val login: String,
     var password: String,
     val mail: String,
-    var bio: String,
+    var bio: String = "",
 ) {
     fun setAboutUser() {
         println("Id: ${id}, Login: ${login}, Password: ${password}, mail: ${mail}, bio: ${bio}")
@@ -31,7 +31,7 @@ class User2(
 }
 
 fun main() {
-    val user = User2(12, "admin", "qwerty", "dada@mail.com", "")
+    val user = User2(12, "admin", "qwerty", "dada@mail.com")
 
     user.rewriteBio()
     user.setNewPassword()
