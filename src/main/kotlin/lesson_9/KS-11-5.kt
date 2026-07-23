@@ -25,7 +25,7 @@ class Forum {
     fun printThread() {
         for (message in messages) {
             val author = users.find { it.userId == message.authorId }
-            println("${author?.userName ?: "Неизвестный"} : ${message.message}")
+            println("${author?.userName ?: "Неизвестный пользователь"} : ${message.message}")
         }
     }
 }
