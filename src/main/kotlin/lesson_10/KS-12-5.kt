@@ -3,9 +3,9 @@ package org.example.lesson_10
 import kotlin.random.Random
 
 class Weather5(
-    var temperatureOfDay: Int,
-    var temperatureOfNight: Int,
-    var humidity: Boolean,
+    val temperatureOfDay: Int,
+    val temperatureOfNight: Int,
+    val humidity: Boolean,
 )
 
 fun main() {
