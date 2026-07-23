@@ -16,8 +16,10 @@ fun main() {
         Subscriber3("Alice", 8956586445),
     )
 
-    val subscribersCompany = subscribers.filter { it.company != null }
+    val subscribersCompany = subscribers.filter {it.company != null}
+    var listOfCompany: MutableList<String?> = mutableListOf()
     for (company in subscribersCompany) {
-        println("${company.company}")
+        listOfCompany += company.company
     }
+    println(listOfCompany)
 }
