@@ -5,11 +5,7 @@ class Subscriber3(
     val name: String,
     val phoneNumber: Long,
     val company: String? = null,
-) {
-    fun printInfo() {
-        println("Имя: $name\nНомер: $phoneNumber\nКомпания: ${company ?: "<не указано>"}")
-    }
-}
+)
 
 fun main() {
     val subscribers = listOf(
@@ -20,7 +16,7 @@ fun main() {
         Subscriber3("Alice", 8956586445),
     )
 
-    val subscribersCompany = subscribers.filter {it.company != null}
+    val subscribersCompany = subscribers.filter { it.company != null }
     for (company in subscribersCompany) {
         println("${company.company}")
     }
