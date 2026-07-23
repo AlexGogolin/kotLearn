@@ -4,8 +4,8 @@ class Subscriber2(
     val name: String,
     val phoneNumber: Long,
     val company: String? = null,
-){
-    fun printInfo(){
+) {
+    fun printInfo() {
         println("Имя: $name\nНомер: $phoneNumber\nКомпания: ${company ?: "<не указано>"}")
     }
 }
