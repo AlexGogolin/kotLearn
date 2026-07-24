@@ -6,6 +6,10 @@ open class Ship2(
     open val quantityOfPassengers: Int = 100,
     open val loadCapacity: Int = 200,
 ) {
+    open fun shipInfo() {
+        println("Название корабля: $name Скорость: $speed Количество пассажиров: $quantityOfPassengers Максимальная загрузка: $loadCapacity")
+    }
+
     open fun shipLoad() {
         println("ship load")
     }
@@ -36,16 +40,23 @@ class IceBreaker2(
     override val loadCapacity: Int = 100,
     val hasIceBreaker: Boolean = true,
 ) : Ship2(name, speed, loadCapacity = loadCapacity) {
+    override fun shipInfo() {
+        println("Название корабля: $name Скорость: $speed Количество пассажиров: $quantityOfPassengers Максимальная загрузка: $loadCapacity Может колоть лед: $hasIceBreaker")
+    }
+
     override fun shipLoad() {
         println("Ледокол открывает ворота со стороны кормы")
     }
 }
 
 fun main() {
+    System.setOut(java.io.PrintStream(System.`out`, true, "UTF-8"))
     val ship1 = Liner2("Anna")
     val ship2 = CargoShip2("Bob")
     val ship3 = IceBreaker2("Billi")
-
+    ship1.shipInfo()
+    ship2.shipInfo()
+    ship3.shipInfo()
     ship1.shipLoad()
     ship2.shipLoad()
     ship3.shipLoad()
