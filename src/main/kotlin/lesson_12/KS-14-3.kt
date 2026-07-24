@@ -1,5 +1,8 @@
 package org.example.lesson_12
 
+const val WHITE ="White"
+const val BLACK = "Black"
+
 abstract class Figure(
     val color: String,
 ) {
@@ -38,22 +41,22 @@ class Rectangle(
 fun main() {
 
     val listOfFigures = listOf<Figure>(
-        Circle("White", 16.5),
-        Circle("Black", 13.2),
-        Circle("White", 12.4),
-        Circle("Black", 9.0),
-        Rectangle("Black", 25.0, 16.7),
-        Rectangle("White", 19.5, 13.2),
-        Rectangle("Black", 15.6, 19.1),
-        Rectangle("White", 18.2, 8.1),
+        Circle(WHITE, 16.5),
+        Circle(BLACK, 13.2),
+        Circle(WHITE, 12.4),
+        Circle(BLACK, 9.0),
+        Rectangle(BLACK, 25.0, 16.7),
+        Rectangle(WHITE, 19.5, 13.2),
+        Rectangle(BLACK, 15.6, 19.1),
+        Rectangle(WHITE, 18.2, 8.1),
     )
-    val whiteFigures = listOfFigures.filter { it.color == "White" }
-    val blackFigures = listOfFigures.filter { it.color == "Black" }
+    val whiteFigures = listOfFigures.filter { it.color == WHITE }
+    val blackFigures = listOfFigures.filter { it.color == BLACK }
 
-    val blackFiguresArea = blackFigures.sumOf { it.perimeter() }
-    val whiteFiguresPerimeters = whiteFigures.sumOf { it.area() }
+    val blackFiguresPerimeter = blackFigures.sumOf { it.perimeter() }
+    val whiteFiguresArea = whiteFigures.sumOf { it.area() }
+    println(blackFiguresPerimeter)
+    println(whiteFiguresArea)
 
-    println(whiteFiguresPerimeters)
-    println(blackFiguresArea)
 
 }
