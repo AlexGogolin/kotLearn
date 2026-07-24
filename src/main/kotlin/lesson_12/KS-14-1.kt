@@ -1,30 +1,33 @@
 package org.example.lesson_12
 
 open class Ship(
-    val name: String,
-    val speed: Int = 50,
-    val quantityOfPassengers: Int = 100,
-    val loadCapacity: Int = 200,
+    open val name: String,
+    open val speed: Int = 50,
+    open val quantityOfPassengers: Int = 100,
+    open val loadCapacity: Int = 200,
 )
 
 class Liner(
-    name: String,
-    quantityOfPassengers: Int = 500,
+    override val name: String,
+    override val quantityOfPassengers: Int = 500,
 ) : Ship(name, quantityOfPassengers = quantityOfPassengers)
 
 class CargoShip(
-    name: String,
-    speed: Int = 20,
-    loadCapacity: Int = 800,
+    override val name: String,
+    override val speed: Int = 20,
+    override val loadCapacity: Int = 800,
 ) : Ship(name, speed, loadCapacity = loadCapacity)
 
 class IceBreaker(
-    name: String,
-    speed: Int = 15,
-    loadCapacity: Int = 100,
-    hasIceBreaker: Boolean = true,
+    override val name: String,
+    override val speed: Int = 15,
+    override val loadCapacity: Int = 100,
+    val hasIceBreaker: Boolean = true,
 ) : Ship(name, speed, loadCapacity = loadCapacity)
 
 fun main() {
 
+    val liner = Liner("Anna")
+    val cargoShip = CargoShip("Bob")
+    val iceBreaker = IceBreaker("Lenin")
 }
