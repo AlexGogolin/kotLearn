@@ -10,7 +10,7 @@ open class Ship(
 class Liner(
     name: String,
     quantityOfPassengers: Int = 500,
-    ) : Ship(name, quantityOfPassengers = quantityOfPassengers)
+) : Ship(name, quantityOfPassengers = quantityOfPassengers)
 
 class CargoShip(
     name: String,
@@ -20,7 +20,11 @@ class CargoShip(
 
 class IceBreaker(
     name: String,
-    speed: Int  = 15,
+    speed: Int = 15,
     loadCapacity: Int = 100,
     hasIceBreaker: Boolean = true,
 ) : Ship(name, speed, loadCapacity = loadCapacity)
+
+fun main() {
+
+}
