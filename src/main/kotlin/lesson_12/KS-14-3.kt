@@ -50,8 +50,8 @@ fun main() {
     val whiteFigures = listOfFigures.filter { it.color == "White" }
     val blackFigures = listOfFigures.filter { it.color == "Black" }
 
-    val blackFiguresArea = whiteFigures.sumOf { it.perimeter() }
-    val whiteFiguresPerimeters = blackFigures.sumOf { it.area() }
+    val blackFiguresArea = blackFigures.sumOf { it.perimeter() }
+    val whiteFiguresPerimeters = whiteFigures.sumOf { it.area() }
 
     println(whiteFiguresPerimeters)
     println(blackFiguresArea)
