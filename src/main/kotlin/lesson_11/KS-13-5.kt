@@ -11,8 +11,6 @@ class Subscriber5(
 }
 
 fun main() {
-
-    println("Введите данные абонента")
     println("Введите номер телефона:")
     val phoneNumber: String = readln()
     var phoneNumberLong: Long?
@@ -22,6 +20,4 @@ fun main() {
         println(e::class.simpleName)
         phoneNumberLong = null
     }
-
-
 }
