@@ -17,7 +17,7 @@ class Circle(
     }
 
     override fun perimeter(): Double {
-        return radius * Math.PI
+        return 2 * Math.PI * radius
     }
 }
 
@@ -50,8 +50,8 @@ fun main() {
     val whiteFigures = listOfFigures.filter { it.color == "White" }
     val blackFigures = listOfFigures.filter { it.color == "Black" }
 
-    val whiteFiguresPerimeters = whiteFigures.sumOf { it.perimeter() }
-    val blackFiguresArea = blackFigures.sumOf { it.area() }
+    val blackFiguresArea = whiteFigures.sumOf { it.perimeter() }
+    val whiteFiguresPerimeters = blackFigures.sumOf { it.area() }
 
     println(whiteFiguresPerimeters)
     println(blackFiguresArea)
