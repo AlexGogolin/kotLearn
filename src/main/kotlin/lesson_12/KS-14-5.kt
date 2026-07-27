@@ -4,13 +4,13 @@ class Chat(
     val messageList: MutableList<Message> = mutableListOf(),
     var idCounter: Int = 1,
 ) {
-    fun addMessage(author: String, message: String) {
-        val newMessage = Message(idCounter,author, message)
+    fun addMessage(message: String, author: String) {
+        val newMessage = Message(idCounter, author, message)
         messageList.add(newMessage)
         idCounter++
     }
 
-    fun addThreadMessage(author: String, message: String, parentMessageId: Int) {
+    fun addThreadMessage(message: String, author: String, parentMessageId: Int) {
         val newChildMessage = ChildMessage(idCounter, author, message, parentMessageId)
         messageList.add(newChildMessage)
         idCounter++
@@ -21,10 +21,10 @@ class Chat(
             if (message is ChildMessage) {
                 message.parentMessageId
             } else {
-                message.messageId
+                message.Id
             }
         }
-        grouped.forEach { key, messages ->
+        grouped.forEach { (key, messages) ->
             for (message in messages) {
                 if (message is ChildMessage) {
                     println("\t${message.author} - ${message.text}")
@@ -37,7 +37,7 @@ class Chat(
 }
 
 open class Message(
-    val messageId: Int,
+    val Id: Int,
     val author: String,
     val text: String,
 )
