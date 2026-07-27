@@ -21,7 +21,7 @@ class Chat(
             if (message is ChildMessage) {
                 message.parentMessageId
             } else {
-                message.Id
+                message.id
             }
         }
         grouped.forEach { (key, messages) ->
@@ -37,7 +37,7 @@ class Chat(
 }
 
 open class Message(
-    val Id: Int,
+    val id: Int,
     val author: String,
     val text: String,
 )
