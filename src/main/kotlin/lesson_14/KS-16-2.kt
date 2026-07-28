@@ -3,7 +3,7 @@ package org.example.lesson_14
 private const val PI: Double = 3.14
 
 class Circle(
-    val radius: Int,
+    private val radius: Int,
 ) {
 
     fun perimeter(): Double {
