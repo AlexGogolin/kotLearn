@@ -1,21 +1,23 @@
 package org.example.lesson_14
 
+private const val PI: Double = 3.14
+
 class Circle(
-    private val pi: Double = 3.14,
+    val radius: Int,
 ) {
 
-    fun perimeter(radius: Int): Double {
-        return (2 * pi) * radius
+    fun perimeter(): Double {
+        return (2 * PI) * radius
     }
 
-    fun area(radius: Int): Double {
-        return pi * (radius * radius)
+    fun area(): Double {
+        return PI * (radius * radius)
     }
 }
 
 fun main() {
-    val circle = Circle()
-    println(circle.perimeter(2))
-    println(circle.area(3))
+    val circle = Circle(5)
+    println(circle.perimeter())
+    println(circle.area())
 }
 
