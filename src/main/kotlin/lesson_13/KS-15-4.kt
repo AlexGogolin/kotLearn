@@ -2,7 +2,7 @@ package org.example.lesson_13
 
 interface Search {
     fun searchAccessories() {
-        println("Search Accessories")
+        println("Выполняется поиск")
     }
 }
 
