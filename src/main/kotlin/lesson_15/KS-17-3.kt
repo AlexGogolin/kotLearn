@@ -1,17 +1,19 @@
 package org.example.lesson_15
 
 class Package(
-    val name: String,
-    val quantityOfFiles: Int,
+    name: String,
+    quantityOfFiles: Int,
     var topSecret: Boolean = true,
 ) {
-    val getInfo: String
-        get() = if (!topSecret) "$name Файлов: $quantityOfFiles" else "Cкрытая папка, количество файлов: 0"
+    val getName: String = name
+        get() = if (topSecret) "Скрытая папка" else field
+    val getQuantityOfFiles: Int = quantityOfFiles
+        get() = if (topSecret) 0 else field
 }
 
 fun main() {
     val file = Package("Zone51", 62)
-    println(file.getInfo)
+    println("Имя папки ${file.getName} Количество файлов: ${file.getQuantityOfFiles}")
     file.topSecret = false
-    println(file.getInfo)
+    println("Имя папки ${file.getName} Количество файлов: ${file.getQuantityOfFiles}")
 }
