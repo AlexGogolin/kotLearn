@@ -7,19 +7,19 @@ open class Animal(val name: String) {
 
 class Dog(name: String) : Animal(name) {
     override fun eat() {
-        println("$name ест кости")
+        println("$name -> ест кости")
     }
 }
 
 class Fox(name: String) : Animal(name) {
     override fun eat() {
-        println("$name ест ягоды")
+        println("$name -> ест ягоды")
     }
 }
 
 class Cat(name: String) : Animal(name) {
     override fun eat() {
-        println("$name ест рыбу")
+        println("$name -> ест рыбу")
     }
 }
 
