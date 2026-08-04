@@ -2,23 +2,24 @@ package org.example.lesson_16
 
 open class Animal(val name: String) {
     open fun eat() {}
+    fun sleep(){}
 }
 
 class Dog(name: String) : Animal(name) {
     override fun eat() {
-        println("$name -> кости")
+        println("$name ест кости")
     }
 }
 
 class Fox(name: String) : Animal(name) {
     override fun eat() {
-        println("$name -> ягоды")
+        println("$name ест ягоды")
     }
 }
 
 class Cat(name: String) : Animal(name) {
     override fun eat() {
-        println("$name -> рыбу")
+        println("$name ест рыбу")
     }
 }
 
