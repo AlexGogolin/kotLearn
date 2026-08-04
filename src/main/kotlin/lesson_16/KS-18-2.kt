@@ -4,18 +4,12 @@ open class Dice(
     val sides: Int = 6,
 ) {
     fun rollDice() {
-        val result = (1..sides).random()
-        println(result)
+        println("${(1..sides).random()}")
     }
 }
 
-class SmallDice(
-    sides: Int = 4,
-) : Dice(sides)
-
-class LargeDice(
-    sides: Int = 8,
-) : Dice(sides)
+class SmallDice : Dice(4)
+class LargeDice : Dice(8)
 
 fun main() {
     val dice1 = SmallDice()
