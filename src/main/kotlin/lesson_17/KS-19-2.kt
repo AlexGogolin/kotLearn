@@ -3,9 +3,9 @@ package org.example.lesson_17
 enum class Categories(
     val nameOfCategory: String,
 ) {
-    BOOKS("Книги"),
-    TOYS("Игрушки"),
-    TOOLS("Инструменты");
+    CLOTHING("Одежда"),
+    STATIONERY("Канцелярские товары"),
+    OTHERS("Разное");
 
     fun printCategoryName(): String {
         return nameOfCategory
@@ -14,24 +14,21 @@ enum class Categories(
 
 class Product(
     val name: String,
-    val Id: Int,
-    val category: String,
+    val id: Int,
+    val category: Categories,
 ) {
     fun printInfo() {
-        val listOfCategories = Categories.entries
-        val filteredCategory = listOfCategories.find { category == it.nameOfCategory }
-        val nameOfCategory = filteredCategory?.printCategoryName()
-        println("Название товара: $name, ID товара: $Id, Категория товара: $nameOfCategory")
+        println("Название товара: $name, ID товара: $id, Категория товара: ${category.printCategoryName()}")
     }
 }
 
 fun main() {
     System.setOut(java.io.PrintStream(System.`out`, true, "UTF-8"))
-    val book1 = Product("1984", 1, "Книги")
-    val tool1 = Product("Hummer", 2, "Инструменты")
-    val toy1 = Product("Lego", 3, "Игрушки")
-    book1.printInfo()
-    tool1.printInfo()
+    val hat = Product("DM", 1, Categories.CLOTHING)
+    val pencil = Product("Parker", 2, Categories.STATIONERY)
+    val toy1 = Product("Lego", 3, Categories.OTHERS)
+    hat.printInfo()
+    pencil.printInfo()
     toy1.printInfo()
 
 }
