@@ -11,7 +11,6 @@ enum class Ammo(val damage: Int) {
 }
 
 class Tank(
-    val ammo: Ammo? = null,
     var isLoaded: Boolean = false,
 ) {
     var currentAmmo: Int = 0
