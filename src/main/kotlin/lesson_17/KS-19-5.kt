@@ -15,7 +15,7 @@ fun main() {
     var counter = 1
     println("В картотеку нужно внести 5 человек.")
 
-    while (listOfPersons.size < 2) {
+    while (listOfPersons.size < 5) {
         println("№$counter Пожалуйста введите имя:")
         val name = readln()
         println("теперь пол: \"Муж\" или \"Жен\"")
