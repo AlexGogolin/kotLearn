@@ -2,7 +2,7 @@ package org.example.lesson_17
 
 enum class Gender(val translateGender: String) {
     MALE("Муж"),
-    FEMALE("Жен")
+    FEMALE("Жен");
 }
 
 class Person(
