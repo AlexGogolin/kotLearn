@@ -13,7 +13,7 @@ class Person(
 fun main() {
     val listOfPersons = mutableListOf<Person>()
     var counter = 1
-    println("В картотеку нужно внести 5 человек.")
+    println("В картотеку нужно внести 5 человек. Сначала вводите имя, потом пол Муж или Жен, пример: \"Алексей Муж\" ")
 
     while (listOfPersons.size < 5) {
         println("№$counter Пожалуйста введите имя:")
